@@ -88,6 +88,8 @@ main {
     background-color: lightblue;
     /* make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
+    /* To see the Main content underneath the nav bar again */
+    margin-top: 47px; 
 }
 
 /* footer */
