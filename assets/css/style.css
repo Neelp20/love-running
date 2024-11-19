@@ -5,7 +5,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing:border-box ;
+    box-sizing: border-box ;
 
 }
 /* General styles */
@@ -18,7 +18,7 @@ body {
     font-family:'Lato', sans-serif;
 }
 
-/* header */
+/* Header */
 header {
     background-color: #ffffff;
     padding: 0 1rem;
@@ -38,7 +38,7 @@ header a {
 
 
 h1 {
-    font-family:'Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
@@ -71,7 +71,7 @@ nav {
     top: 100%;
 }
 
-/* nav toggle */
+/* Nav toggle */
 #nav-toggle:checked~nav {
     display: block;
 }
@@ -83,13 +83,21 @@ nav {
 }
 
 
-/* main content */
+/* Main content */
 main {
-    background-color: lightblue;
-    /* make main element take up any surplus space to push footer down */
+    /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     /* To see the Main content underneath the nav bar again */
     margin-top: 47px; 
+}
+
+
+/* Hero section */
+#hero {
+    height: 600px;
+    width: 100%;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
+    
 }
 
 /* footer */
@@ -126,7 +134,7 @@ main {
      }
 
      .nav-toggle-label {
-        display:none ;
+        display:none;
      }
      #logo {
         font-size: 280%;
