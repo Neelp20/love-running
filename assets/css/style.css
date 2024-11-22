@@ -89,12 +89,14 @@ nav {
 
 /* Main content */
 main {
-    /* Make main element take up any surplus space to push footer down */
+    /* Enlarge main element to push footer down*/
     flex: 1 0 auto;
-    /* To see the Main content underneath the nav bar again */
-    margin-top: 47px; 
+    /* Add margin at the top to prevent content from being covered by the header */
+    margin-top: 47px;
+    /* Enable flex properties for child elements */
+    display: flex;
+    flex-direction: column;
 }
-
 
 /* Hero section */
 #hero {
@@ -198,6 +200,54 @@ main {
     line-height: 0;   
 }
 
+/*  */
+
+/* Form */
+#signup {
+    background-image: url("../images/signup-image.webp");
+    background-size: cover;
+    background-position: 75%;
+    padding: 20px 10% 0 10%;
+    flex-grow: 1;
+}
+#signup-form {
+    color: #ffffff;
+    background-color: rgba(60, 60, 60, 0.6);
+    padding: 30px;
+}
+
+#signup-form>h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    padding: 0 5px;
+}
+
+.radio-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.join-button {
+    margin-top: 20px;
+    border-radius: 2px;
+    padding: 15px 32px;
+    font-size: 100%;
+    background-color: #454b1b;
+    color: #fafafa;
+}
+
+
+
 /* footer */
 #social-networks {
     text-align: center;
@@ -216,7 +266,9 @@ main {
 /* Media query :large or landscpe phones (576px and up) */
 @media screen and (min-width:576px) {
    #photos {
+    /* We want 2 columns on large screens so value will be 2 */
     column-count: 2;
+    /* To remove the gap between the columns will set the value 0 below */
     column-gap: 0;
    } 
     
@@ -279,8 +331,31 @@ main {
      }
      /* Gallery */
      #photos {
+        /* We want 3 columns on tablet mode so the value will be 3 */
         column-count: 3;
      }
+
+     /* Form */
+     #signup {
+        background-position: center;
+        position: relative;
+    }
+
+    #signup-form {
+        max-width: 400px;
+        position: absolute;
+        left: 10%;
+        top: 150px;
+    }
+
+    .text-input:hover {
+        border-color: #f16c6b;
+    }
+
+    .join-button:hover {
+        background-color: #fafafa;
+        color: #454b1b;
+    }
 
 }
 
@@ -291,6 +366,7 @@ main {
     }   
     /* Gallery */
     #photos {
+        /* We want 4 columns for laptops and desktop mode */
         column-count: 4;
      }
 
@@ -319,3 +395,4 @@ main {
     }
   
 }
+
